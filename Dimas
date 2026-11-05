@@ -1,0 +1,603 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Портфолио Дмитрия Хамицевича</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;600&family=Golos+Text:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout concept: a design spec sheet. Left-aligned type over a faint column grid.
+   Red measurement marks (the dimension lines designers read in hand-off) are the one
+   recurring graphic device. Each case is an annotated figure in its own composition. */
+:root {
+  --paper: #EDF0F5;
+  --surface: #F8F9FC;
+  --sunken: #E3E7EF;
+  --ink: #11151C;
+  --ink-2: #465061;
+  --line: #C9CFDB;
+  --grid: #E0E4EC;
+  --red: #C4163C;
+  --ok: #1E7B4F;
+  --warn: #8F5700;
+  --bad: #B3261E;
+  --product: #3B5BDB;
+  --product-hover: #324CC0;
+  --product-press: #2A40A3;
+  --on-product: #FFFFFF;
+  --f-display: "Geologica", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Golos Text", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0E1117;
+    --surface: #161A22;
+    --sunken: #1D222C;
+    --ink: #E9EDF4;
+    --ink-2: #9CA6B8;
+    --line: #2B3240;
+    --grid: #181D26;
+    --red: #FF5C7C;
+    --ok: #4CC38A;
+    --warn: #E8A23B;
+    --bad: #FF7A70;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0E1117;
+  --surface: #161A22;
+  --sunken: #1D222C;
+  --ink: #E9EDF4;
+  --ink-2: #9CA6B8;
+  --line: #2B3240;
+  --grid: #181D26;
+  --red: #FF5C7C;
+  --ok: #4CC38A;
+  --warn: #E8A23B;
+  --bad: #FF7A70;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 1rem/1.6 var(--f-body);
+  padding-left: max(clamp(16px, 4vw, 48px), env(safe-area-inset-left, 0px));
+  padding-right: max(clamp(16px, 4vw, 48px), env(safe-area-inset-right, 0px));
+  padding-block: 0 56px;
+}
+h1, h2, h3, h4, p, ul, dl, figure { margin: 0; }
+ul { padding: 0; list-style: none; }
+a { color: inherit; text-underline-offset: 3px; }
+a:hover { color: var(--red); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+code, kbd { font-family: var(--f-mono); }
+.wrap { max-width: 1160px; margin-inline: auto; }
+.mono { font-family: var(--f-mono); }
+.label {
+  font: 500 .6875rem/1.6 var(--f-mono);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+/* header */
+.top {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;
+  gap: 8px 24px; padding-block: 20px; border-bottom: 1px solid var(--line);
+}
+.top__name { font: 400 1.0625rem/1.3 var(--f-display); letter-spacing: -.01em; }
+.top nav ul { display: flex; flex-wrap: wrap; gap: 4px 22px; }
+.top nav a { font-size: .9375rem; }
+
+/* hero */
+.hero { position: relative; isolation: isolate; padding-block: 72px 56px; }
+.hero::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image: repeating-linear-gradient(90deg, var(--grid) 0, var(--grid) 1px, transparent 1px, transparent calc(100% / 4));
+  -webkit-mask-image: linear-gradient(#000 35%, transparent);
+  mask-image: linear-gradient(#000 35%, transparent);
+}
+.kicker { margin-bottom: 28px; }
+.hero__title {
+  display: grid; grid-template-columns: 22px minmax(0, 1fr); column-gap: 20px; align-items: stretch;
+}
+.dim {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  border-top: 1px solid var(--red); border-bottom: 1px solid var(--red);
+}
+.dim::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--red); }
+.dim span {
+  position: relative; writing-mode: vertical-rl; transform: rotate(180deg);
+  background: var(--paper); padding: 8px 3px; white-space: nowrap;
+  font: 500 .6875rem/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--red);
+}
+h1 {
+  font: 300 clamp(2.25rem, 6.4vw, 4.75rem)/1.04 var(--f-display);
+  letter-spacing: -.02em; text-wrap: balance; max-width: 15em;
+}
+h1 em { font-style: normal; font-weight: 600; color: var(--red); }
+.hero__row {
+  display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 32px 64px; margin-top: 44px;
+}
+.lede { font-size: 1.1875rem; line-height: 1.55; color: var(--ink-2); max-width: 52ch; }
+.rows { --dt: 6.5rem; }
+.rows > div {
+  display: grid; grid-template-columns: var(--dt) minmax(0, 1fr); gap: 12px;
+  padding: 10px 0; border-top: 1px solid var(--line);
+}
+.rows dt { font: 500 .6875rem/1.9 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+.rows dd { margin: 0; font-weight: 500; }
+.tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 48px; }
+.tools li {
+  font: 400 .8125rem/1 var(--f-mono); padding: 7px 10px; border: 1px solid var(--line); color: var(--ink-2);
+}
+.tools .label { margin-right: 8px; }
+
+/* section heads */
+.sec-head {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;
+  gap: 8px 16px; margin-top: 72px;
+}
+h2 {
+  font: 300 clamp(1.75rem, 3.6vw, 2.5rem)/1.1 var(--f-display); letter-spacing: -.015em; text-wrap: balance;
+}
+
+/* cases */
+.case {
+  margin-top: 56px; padding-top: 28px; border-top: 2px solid var(--ink);
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px;
+  grid-template-areas: "head" "meta" "vis" "body" "res";
+}
+.case__head { grid-area: head; }
+.meta { grid-area: meta; align-content: start; }
+.case > .fig { grid-area: vis; align-self: start; }
+.case__body { grid-area: body; display: flex; flex-direction: column; gap: 28px; }
+.results { grid-area: res; }
+.tags { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.tags::before { content: ""; width: 8px; height: 8px; background: var(--red); flex: none; }
+h3 {
+  font: 400 clamp(1.75rem, 3.4vw, 2.625rem)/1.1 var(--f-display); letter-spacing: -.015em; text-wrap: balance;
+}
+.case__sum { margin-top: 14px; font-size: 1.125rem; color: var(--ink-2); max-width: 40ch; }
+.block h4 { margin-bottom: 10px; }
+.block > p { max-width: 62ch; }
+.steps { display: grid; gap: 14px; max-width: 62ch; }
+.steps li { position: relative; padding-left: 20px; }
+.steps li::before { content: ""; position: absolute; left: 0; top: .65em; width: 7px; height: 7px; background: var(--ink); }
+.results {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 24px 32px;
+  padding-top: 24px; border-top: 1px solid var(--line);
+}
+.results b {
+  display: block; font: 300 clamp(2rem, 4vw, 3rem)/1.05 var(--f-display); letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums;
+}
+.results .from { font-style: normal; color: var(--ink-2); }
+.results span { display: block; margin-top: 6px; color: var(--ink-2); font-size: .9375rem; max-width: 26ch; }
+
+@media (min-width: 900px) {
+  .case { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 40px 32px; }
+  .case--a { grid-template-areas: "head head head head meta meta" "vis vis vis body body body" "res res res res res res"; }
+  .case--b { grid-template-areas: "head head head head meta meta" "vis vis vis vis vis vis" "body body body body body body" "res res res res res res"; }
+  .case--c { grid-template-areas: "head head head head meta meta" "body body body vis vis vis" "res res res res res res"; }
+  .case--b .case__body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 32px; }
+  .hero::before { background-image: repeating-linear-gradient(90deg, var(--grid) 0, var(--grid) 1px, transparent 1px, transparent calc(100% / 12)); }
+}
+@media (max-width: 800px) {
+  .hero__row { grid-template-columns: minmax(0, 1fr); }
+  .hero { padding-block: 48px 40px; }
+}
+@media (max-width: 560px) {
+  .rows > div { grid-template-columns: minmax(0, 1fr); gap: 0; }
+}
+
+/* figures */
+.fig { background: var(--surface); border: 1px solid var(--line); min-width: 0; }
+.fig__cap {
+  padding: 10px 16px; border-bottom: 1px solid var(--line);
+  font: 400 .75rem/1.5 var(--f-mono); color: var(--ink-2);
+}
+.fig__body { padding: 20px 16px 22px; }
+
+/* figure 1: onboarding */
+.fa__row { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr); gap: 12px; align-items: center; margin-bottom: 14px; }
+.screens { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.screens small { margin-left: 8px; font: 400 .75rem/1 var(--f-mono); color: var(--ink-2); }
+.scr { position: relative; width: 24px; height: 42px; border: 1px solid var(--ink-2); border-radius: 5px; flex: none; }
+.scr::after { content: ""; position: absolute; left: 4px; right: 4px; bottom: 5px; height: 4px; border-radius: 2px; background: var(--ink-2); }
+.scr--on { background: var(--ink); border-color: var(--ink); }
+.scr--on::after { background: var(--paper); }
+.scr--key { border-color: var(--red); border-width: 2px; }
+.scr--key::after { background: var(--red); }
+.legend { display: flex; align-items: center; gap: 8px; margin: 4px 0 24px; font: 400 .75rem/1.4 var(--f-mono); color: var(--ink-2); }
+.legend i { width: 8px; height: 8px; background: var(--red); flex: none; }
+.bars__t { margin-bottom: 4px; }
+.bar { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr); gap: 12px; align-items: center; margin-top: 10px; }
+.bar > span { font: 400 .75rem/1 var(--f-mono); color: var(--ink-2); }
+.bar__track {
+  display: flex; align-items: center; gap: 8px; height: 32px;
+  background: linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0 / 25% 100%;
+  border-right: 1px solid var(--line);
+}
+.bar__track i { display: block; flex: none; height: 16px; background: var(--ink-2); }
+.bar__track i.after { background: var(--red); }
+.bar__track b { font: 500 .8125rem/1 var(--f-mono); font-variant-numeric: tabular-nums; }
+.axis { position: relative; height: 1.25rem; margin: 6px 0 0 calc(3.5rem + 12px); font: 400 .6875rem/1 var(--f-mono); color: var(--ink-2); }
+.axis span { position: absolute; top: 0; transform: translateX(-50%); }
+
+/* figure 2: dispatcher screen */
+.ui__bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 16px; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips span { padding: 5px 11px; border: 1px solid var(--line); font-size: .8125rem; color: var(--ink-2); border-radius: 999px; }
+.chips .on { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.search { font-size: .75rem; color: var(--ink-2); padding: 5px 10px; border: 1px solid var(--line); background: var(--paper); }
+.ui__scroll { overflow-x: auto; }
+.ui table { width: 100%; min-width: 600px; border-collapse: collapse; font-size: .875rem; }
+.ui th { text-align: left; padding: 10px 16px; font: 500 .6875rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); border-bottom: 1px solid var(--line); }
+.ui td { padding: 11px 16px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.ui td.num, .ui td.eta { font-family: var(--f-mono); font-size: .8125rem; font-variant-numeric: tabular-nums; }
+.ui tr.sel td { background: var(--sunken); }
+.ui tr.sel td:first-child { box-shadow: inset 3px 0 0 var(--red); }
+.muted { color: var(--ink-2); }
+.st { display: inline-flex; align-items: center; gap: 7px; font-weight: 500; }
+.st::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.st--ok { color: var(--ok); }
+.st--wait { color: var(--warn); }
+.st--late { color: var(--bad); }
+.ui__keys { display: flex; flex-wrap: wrap; gap: 8px 22px; padding: 12px 16px; font-size: .75rem; color: var(--ink-2); }
+kbd { display: inline-block; margin-right: 3px; padding: 1px 6px; font-size: .6875rem; line-height: 1.5; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; }
+
+/* figure 3: design system */
+.tier { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; padding: 10px 0; border-top: 1px solid var(--line); }
+.tier:first-child { border-top: 0; padding-top: 0; }
+.tier .label { flex: 0 0 7.5rem; }
+.tier code { flex: 1 1 11rem; font-size: .875rem; min-width: 0; overflow-wrap: anywhere; }
+.tier .val { font: 400 .75rem/1 var(--f-mono); color: var(--ink-2); }
+.sw { width: 18px; height: 18px; border-radius: 4px; background: var(--product); flex: none; }
+.anat-wrap { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); }
+.anat { position: relative; display: inline-block; padding: 28px 0 0 34px; }
+.anat__w, .anat__h { position: absolute; border: 0 solid var(--red); font: 500 .6875rem/1 var(--f-mono); color: var(--red); }
+.anat__w { top: 0; left: 34px; right: 0; height: 14px; border-left-width: 1px; border-right-width: 1px; display: flex; align-items: center; justify-content: center; }
+.anat__w::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--red); }
+.anat__h { top: 28px; bottom: 0; left: 0; width: 22px; border-top-width: 1px; border-bottom-width: 1px; display: flex; align-items: center; justify-content: center; }
+.anat__h::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: var(--red); }
+.anat__w span, .anat__h span { position: relative; background: var(--surface); padding: 2px 4px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; width: 112px; height: 36px;
+  border-radius: 8px; background: var(--product); color: var(--on-product); font: 500 .875rem/1 var(--f-body);
+}
+.btn--lg { width: 120px; height: 40px; }
+.btn--hover { background: var(--product-hover); }
+.btn--press { background: var(--product-press); }
+.btn--focus { outline: 2px solid var(--product); outline-offset: 2px; }
+.btn--off { background: var(--sunken); color: var(--ink-2); }
+.anat-note { margin-top: 12px; font: 400 .75rem/1.5 var(--f-mono); color: var(--red); }
+.states { display: grid; grid-template-columns: repeat(auto-fill, minmax(124px, 1fr)); gap: 18px 12px; margin-top: 24px; }
+.states li { display: grid; gap: 8px; justify-items: start; }
+.states .label { text-transform: none; letter-spacing: .02em; }
+
+/* about */
+.about { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px 48px; margin-top: 96px; padding-top: 28px; border-top: 2px solid var(--ink); }
+.about__lede { font-size: 1.25rem; line-height: 1.55; max-width: 56ch; margin-bottom: 32px; }
+.about h3.label { font: 500 .6875rem/1.6 var(--f-mono); margin: 36px 0 8px; letter-spacing: .08em; }
+.skills { --dt: 11rem; }
+.xp { --dt: 9rem; }
+.xp dd span { display: block; font-weight: 400; color: var(--ink-2); font-size: .9375rem; }
+@media (min-width: 900px) { .about { grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); } }
+
+/* contact */
+.contact { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px 48px; margin-top: 80px; padding-top: 28px; border-top: 2px solid var(--ink); }
+.contact__text { max-width: 46ch; font-size: 1.125rem; margin-bottom: 28px; }
+.contact__list > li { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 14px 0; border-top: 1px solid var(--line); }
+.contact__list .label { flex: 0 0 6rem; }
+.contact__list code { font-size: 1rem; user-select: all; }
+.copy {
+  font: 500 .8125rem/1 var(--f-mono); color: var(--ink); background: transparent;
+  border: 1px solid var(--ink); padding: 8px 12px; cursor: pointer;
+}
+.copy:hover { background: var(--ink); color: var(--paper); }
+.status { font: 400 .75rem/1.4 var(--f-mono); color: var(--ink-2); }
+@media (min-width: 900px) { .contact { grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); } }
+
+.foot { margin-top: 72px; padding-top: 16px; border-top: 1px solid var(--line); font: 400 .75rem/1.5 var(--f-mono); color: var(--ink-2); }
+@media (prefers-reduced-motion: no-preference) {
+  a, .copy { transition: color .15s, background-color .15s; }
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <p class="top__name">Дмитрий Хамицевич</p>
+    <nav aria-label="Разделы">
+      <ul>
+        <li><a href="#cases">Кейсы</a></li>
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="kicker label">Senior Product Designer</p>
+      <div class="hero__title">
+        <div class="dim" aria-hidden="true"><span>H1 / Light / −2%</span></div>
+        <h1>Проектирую сложные интерфейсы, в которых <em>не путаются</em></h1>
+      </div>
+      <div class="hero__row">
+        <p class="lede">Прихожу в продукты, которые разрослись, и пользователи в них теряются. Нахожу причину, перестраиваю сценарий и проверяю результат на цифрах.</p>
+        <dl class="rows">
+          <div><dt>Опыт</dt><dd>8 лет в продуктовом дизайне</dd></div>
+          <div><dt>Фокус</dt><dd>Финтех, B2B-платформы, дизайн-системы</dd></div>
+          <div><dt>Формат</dt><dd>Удалённо или гибрид</dd></div>
+        </dl>
+      </div>
+      <ul class="tools" aria-label="Инструменты">
+        <li class="label" style="border:0;padding-left:0">Инструменты</li>
+        <li>Figma</li><li>FigJam</li><li>Miro</li><li>Maze</li><li>Amplitude</li><li>Storybook</li><li>Tokens Studio</li>
+      </ul>
+    </section>
+
+    <div class="sec-head" id="cases">
+      <h2>Избранные кейсы</h2>
+      <p class="label">3 проекта</p>
+    </div>
+
+    <!-- Case 1 -->
+    <article class="case case--a" id="case-fintech">
+      <header class="case__head">
+        <p class="tags label">Fintech · B2C · iOS, Android</p>
+        <h3>Мобильный банк для фрилансеров</h3>
+        <p class="case__sum">Онбординг, из которого перестали уходить.</p>
+      </header>
+      <dl class="meta rows">
+        <div><dt>Роль</dt><dd>Lead Product Designer</dd></div>
+        <div><dt>Команда</dt><dd>2 дизайнера, 5 разработчиков, PM</dd></div>
+        <div><dt>Срок</dt><dd>5 месяцев</dd></div>
+      </dl>
+      <figure class="fig">
+        <figcaption class="fig__cap">Рис. 1 · Онбординг до и после</figcaption>
+        <div class="fig__body" aria-hidden="true">
+          <div class="fa__row">
+            <span class="label">Было</span>
+            <div class="screens">
+              <i class="scr"></i><i class="scr"></i><i class="scr"></i><i class="scr"></i><i class="scr"></i><i class="scr scr--key"></i><i class="scr"></i><i class="scr"></i><i class="scr"></i>
+              <small>9 экранов</small>
+            </div>
+          </div>
+          <div class="fa__row">
+            <span class="label">Стало</span>
+            <div class="screens">
+              <i class="scr scr--on"></i><i class="scr scr--on"></i><i class="scr scr--on"></i><i class="scr scr--on"></i>
+              <small>4 экрана</small>
+            </div>
+          </div>
+          <p class="legend"><i></i>Красным отмечен шаг верификации, на котором уходили</p>
+          <div class="bars">
+            <p class="bars__t label">Дошли до конца онбординга, %</p>
+            <div class="bar"><span>Было</span><div class="bar__track"><i style="width:38%"></i><b>38%</b></div></div>
+            <div class="bar"><span>Стало</span><div class="bar__track"><i class="after" style="width:61%"></i><b>61%</b></div></div>
+            <div class="axis"><span style="left:0">0</span><span style="left:25%">25</span><span style="left:50%">50</span><span style="left:75%">75</span><span style="left:100%">100</span></div>
+          </div>
+        </div>
+      </figure>
+      <div class="case__body">
+        <section class="block">
+          <h4 class="label">Задача</h4>
+          <p>Фрилансеры бросали регистрацию на шаге верификации. До конца доходили 38% пользователей, и каждый потерянный клиент уже был оплачен рекламой.</p>
+        </section>
+        <section class="block">
+          <h4 class="label">Что сделал</h4>
+          <ul class="steps">
+            <li>Провёл 12 интервью с фрилансерами разных профессий и собрал CJM. Главная причина ухода: паспорт и селфи просили до того, как человек понимал, что получит.</li>
+            <li>Сократил онбординг с 9 экранов до 4 и перенёс верификацию на момент первого вывода денег.</li>
+            <li>Сравнил два варианта на кликабельных прототипах в Maze, затем запустил A/B-тест на 20% трафика.</li>
+          </ul>
+        </section>
+      </div>
+      <ul class="results" aria-label="Результаты">
+        <li><b><i class="from">38</i> → 61%</b><span>конверсия в регистрацию</span></li>
+        <li><b><i class="from">9</i> → 4</b><span>экрана в онбординге</span></li>
+        <li><b>+14</b><span>к NPS за квартал после запуска</span></li>
+      </ul>
+    </article>
+
+    <!-- Case 2 -->
+    <article class="case case--b" id="case-logistics">
+      <header class="case__head">
+        <p class="tags label">B2B · Логистика · Web</p>
+        <h3>Единый экран диспетчера</h3>
+        <p class="case__sum">Пять систем превратились в один рабочий экран.</p>
+      </header>
+      <dl class="meta rows">
+        <div><dt>Роль</dt><dd>Senior Product Designer</dd></div>
+        <div><dt>Команда</dt><dd>2 дизайнера, 8 разработчиков, аналитик</dd></div>
+        <div><dt>Срок</dt><dd>7 месяцев</dd></div>
+      </dl>
+      <figure class="fig">
+        <figcaption class="fig__cap">Рис. 2 · Список заказов диспетчера, плотный режим</figcaption>
+        <div class="ui" aria-hidden="true">
+          <div class="ui__bar">
+            <div class="chips"><span class="on">Все 114</span><span>В пути 74</span><span>Ожидают 31</span><span>Задержка 9</span></div>
+            <span class="search mono">Поиск <kbd>/</kbd></span>
+          </div>
+          <div class="ui__scroll">
+            <table>
+              <thead><tr><th>Заказ</th><th>Маршрут</th><th>Водитель</th><th>ETA</th><th>Статус</th></tr></thead>
+              <tbody>
+                <tr><td class="num">ЗК-48213</td><td>Москва → Казань</td><td>Р. Хасанов</td><td class="eta">14:20</td><td><span class="st st--ok">В пути</span></td></tr>
+                <tr class="sel"><td class="num">ЗК-48214</td><td>Тверь → Санкт-Петербург</td><td class="muted">не назначен</td><td class="eta muted">–</td><td><span class="st st--wait">Ожидает</span></td></tr>
+                <tr><td class="num">ЗК-48209</td><td>Нижний Новгород → Москва</td><td>С. Лебедев</td><td class="eta">15:05</td><td><span class="st st--ok">В пути</span></td></tr>
+                <tr><td class="num">ЗК-48198</td><td>Екатеринбург → Челябинск</td><td>А. Рогов</td><td class="eta">16:40 +1:10</td><td><span class="st st--late">Задержка</span></td></tr>
+                <tr><td class="num">ЗК-48220</td><td>Москва → Воронеж</td><td>Д. Миронов</td><td class="eta">19:00</td><td><span class="st st--ok">В пути</span></td></tr>
+                <tr><td class="num">ЗК-48221</td><td>Самара → Саратов</td><td class="muted">не назначен</td><td class="eta muted">–</td><td><span class="st st--wait">Ожидает</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="ui__keys mono">
+            <span><kbd>J</kbd><kbd>K</kbd> по списку</span>
+            <span><kbd>A</kbd> назначить водителя</span>
+            <span><kbd>F</kbd> фильтры</span>
+            <span><kbd>⌘</kbd><kbd>Enter</kbd> подтвердить</span>
+          </div>
+        </div>
+      </figure>
+      <div class="case__body">
+        <section class="block">
+          <h4 class="label">Задача</h4>
+          <p>Диспетчеры работали в пяти разных системах и сверяли рейсы вручную. Из-за этого случались ошибки при назначении водителей, а каждая ошибка означала простой машины.</p>
+        </section>
+        <section class="block">
+          <h4 class="label">Что сделал</h4>
+          <ul class="steps">
+            <li>Две недели провёл рядом с диспетчерами на рабочих местах и описал 14 повторяющихся операций.</li>
+            <li>Собрал единый экран: список заказов, карта рейсов и карточка водителя с общими фильтрами. Частые действия вынес на горячие клавиши.</li>
+            <li>Для плотных таблиц, статусов и состояний ошибок сделал набор из 40+ компонентов. Позже он лёг в основу общей дизайн-системы.</li>
+          </ul>
+        </section>
+      </div>
+      <ul class="results" aria-label="Результаты">
+        <li><b>−27%</b><span>время обработки заказа</span></li>
+        <li><b>−35%</b><span>ошибок при назначении рейсов</span></li>
+        <li><b><i class="from">5</i> → 1</b><span>система в ежедневной работе диспетчера</span></li>
+      </ul>
+    </article>
+
+    <!-- Case 3 -->
+    <article class="case case--c" id="case-system">
+      <header class="case__head">
+        <p class="tags label">Дизайн-система · Процессы · Web</p>
+        <h3>Дизайн-система для трёх продуктов</h3>
+        <p class="case__sum">Одна библиотека вместо трёх наборов кнопок.</p>
+      </header>
+      <dl class="meta rows">
+        <div><dt>Роль</dt><dd>Design System Lead</dd></div>
+        <div><dt>Команда</dt><dd>6 дизайнеров, 12 разработчиков</dd></div>
+        <div><dt>Срок</dt><dd>9 месяцев</dd></div>
+      </dl>
+      <figure class="fig">
+        <figcaption class="fig__cap">Рис. 3 · Токены и состояния основной кнопки</figcaption>
+        <div class="fig__body" aria-hidden="true">
+          <div class="tiers">
+            <div class="tier"><span class="label">Базовый</span><i class="sw"></i><code>color.blue.600</code><span class="val">#3B5BDB</span></div>
+            <div class="tier"><span class="label">Семантический</span><i class="sw"></i><code>color.action.primary</code><span class="val">→ blue.600</span></div>
+            <div class="tier"><span class="label">Компонентный</span><i class="sw"></i><code>button.primary.bg</code><span class="val">→ action.primary</span></div>
+          </div>
+          <div class="anat-wrap">
+            <div class="anat">
+              <div class="anat__w"><span>120</span></div>
+              <div class="anat__h"><span>40</span></div>
+              <span class="btn btn--lg">Сохранить</span>
+            </div>
+            <p class="anat-note">padding 12 × 20 · radius 8 · focus ring 2 + offset 2</p>
+          </div>
+          <ul class="states">
+            <li><span class="btn">Сохранить</span><span class="label">Default</span></li>
+            <li><span class="btn btn--hover">Сохранить</span><span class="label">Hover</span></li>
+            <li><span class="btn btn--press">Сохранить</span><span class="label">Pressed</span></li>
+            <li><span class="btn btn--focus">Сохранить</span><span class="label">Focus</span></li>
+            <li><span class="btn btn--off">Сохранить</span><span class="label">Disabled</span></li>
+          </ul>
+        </div>
+      </figure>
+      <div class="case__body">
+        <section class="block">
+          <h4 class="label">Задача</h4>
+          <p>Шесть дизайнеров вели три продукта, и в каждом кнопка выглядела по-своему. Макеты расходились с кодом, а споры о мелочах занимали часы на каждом ревью.</p>
+        </section>
+        <section class="block">
+          <h4 class="label">Что сделал</h4>
+          <ul class="steps">
+            <li>Провёл аудит интерфейсов: 63 оттенка серого и 11 вариантов основной кнопки.</li>
+            <li>Ввёл три уровня токенов: базовые, семантические и компонентные. Смена темы или бренда теперь правится в одном месте.</li>
+            <li>Собрал библиотеку в Figma и Storybook, написал документацию и процесс: как предложить новый компонент и как он попадает в релиз.</li>
+          </ul>
+        </section>
+      </div>
+      <ul class="results" aria-label="Результаты">
+        <li><b>−30%</b><span>время на сборку макетов</span></li>
+        <li><b><i class="from">63</i> → 9</b><span>оттенков серого в интерфейсах</span></li>
+        <li><b>3 из 3</b><span>продукта перешли на общую библиотеку</span></li>
+      </ul>
+    </article>
+
+    <section class="about" id="about">
+      <h2>Обо мне</h2>
+      <div>
+        <p class="about__lede">Восемь лет проектирую продукты для банков, логистики и e-commerce. Мне интересны задачи, где у пользователя много данных и мало времени, а решение нужно согласовать с аналитиками, разработкой и бизнесом. Иду от гипотезы к проверке: интервью, прототип, метрика, и только потом пиксели.</p>
+        <dl class="rows skills">
+          <div><dt>Исследования</dt><dd>Глубинные интервью, CJM, JTBD, юзабилити-тесты, shadowing</dd></div>
+          <div><dt>Проектирование</dt><dd>Сложные формы, таблицы и дашборды, онбординг, платёжные сценарии</dd></div>
+          <div><dt>Системность</dt><dd>Токены, библиотеки в Figma, Storybook, документация</dd></div>
+          <div><dt>Команда</dt><dd>Менторство трёх дизайнеров, ревью макетов, работа с разработкой и аналитикой</dd></div>
+        </dl>
+        <h3 class="label">Опыт</h3>
+        <dl class="rows xp">
+          <div><dt>2023 – сейчас</dt><dd>Lead Product Designer<span>Финтех-продукт для фрилансеров</span></dd></div>
+          <div><dt>2020 – 2023</dt><dd>Senior Product Designer<span>Логистическая платформа, B2B</span></dd></div>
+          <div><dt>2018 – 2020</dt><dd>Product Designer<span>Продуктовая студия, e-commerce и мобильные приложения</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Контакты</h2>
+      <div>
+        <p class="contact__text">Открыт к предложениям на позицию Senior или Lead Product Designer. Отвечаю в течение дня.</p>
+        <ul class="contact__list">
+          <li>
+            <span class="label">Почта</span>
+            <code id="mail">hamicevicdmitrij321@gmail.com</code>
+            <button type="button" class="copy" id="copy-mail">Скопировать</button>
+            <span class="status" id="copy-status" role="status"></span>
+          </li>
+          <li>
+            <span class="label">Telegram</span>
+            <code>@hamster9999</code>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">© 2026 Дмитрий Хамицевич</footer>
+</div>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy-mail');
+  var src = document.getElementById('mail');
+  var status = document.getElementById('copy-status');
+  if (!btn || !src || !status) return;
+  var timer;
+  function say(text, label) {
+    status.textContent = text;
+    btn.textContent = label;
+    clearTimeout(timer);
+    timer = setTimeout(function () { status.textContent = ''; btn.textContent = 'Скопировать'; }, 2500);
+  }
+  function fallback() {
+    try {
+      var range = document.createRange();
+      range.selectNodeContents(src);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    } catch (e) {}
+    say('Адрес выделен, нажмите Ctrl+C', 'Скопировать');
+  }
+  btn.addEventListener('click', function () {
+    var text = src.textContent.trim();
+    try {
+      navigator.clipboard.writeText(text).then(function () {
+        say('Адрес скопирован', 'Скопировано');
+      }, fallback);
+    } catch (e) {
+      fallback();
+    }
+  });
+})();
+</script>
+
+</body></html>
